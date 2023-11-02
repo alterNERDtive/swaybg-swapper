@@ -35,19 +35,21 @@ one looking for it, here it is. Have fun!
    `~/.config/systemd/user/swaybg-swapper.timer.d/timer.conf` and edit the `60m` 
    timer to your desire.
 
-You probably also want a way to start the service when sway starts. There are 
-various ways to do that. If you want to keep it simple, `exec` a simple 
-`systemctl --user start swaybg-swapper.service` in your sway config. If you want 
-to do it “right”, set up some `sway-session.target` and a dropin config for the 
-service that binds it to that, then have sway run the target on startup. If you 
-want to do it in any other way, go ahead!
+You probably also want to start the service when sway starts. There are various 
+ways to do that. If you want to keep it simple, `exec` a simple `systemctl
+--user start swaybg-swapper.service` in your sway config. If you want to do it 
+“right”, set up some `sway-session.target` and a drop-in config for the service 
+that binds it to that, then have sway run the target on startup.
+
+If you want to do it in any other way, go ahead! I’m not your dad. At least I’m 
+fairly confident that I’m not.
 
 ## Known Issues
 
-Since I have hacked this in a couple h from concept to “eh, works well enough”, 
-it is not very resilient. You mess up the timer/service, you have syntax errors 
-in your configuration file … it will just die instead of spawning a `swaybg` 
-process.
+Since I have hacked this in a couple hours from concept to “eh, works well 
+enough”, it is not very resilient. You mess up the timer/service, you have 
+syntax errors in your configuration file … it will just die instead of spawning 
+a `swaybg` process.
 
 On the plus side, you’ll notice when it doesn’t work. Since, you know, you don’t 
 get your wallpapers.
