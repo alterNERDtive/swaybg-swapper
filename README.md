@@ -9,6 +9,20 @@ chosen randomly from the configuration file.
 
 That’s it. Nothing fancy.
 
+## Why Should I Use This?
+
+Eh, you don’t have to. I was looking for a way to change my wallpaper at set 
+intervals that
+
+* supported multi-monitor setups properly,
+* didn’t reinvent the wallpaper wheel, instead used `swaybg` in the background,
+* integrated nicely with systemd (which I use to run _all_ my desktop related 
+  things) and
+* just worked.
+
+That didn’t seem to exist, so I made it. And since I’m _probably_ not the only 
+one looking for it, here it is. Have fun!
+
 ## How Does It Work?
 
 1. Copy `backgrounds.example.json` to `~/config/sway/backgrounds.json`.
@@ -27,6 +41,16 @@ various ways to do that. If you want to keep it simple, `exec` a simple
 to do it “right”, set up some `sway-session.target` and a dropin config for the 
 service that binds it to that, then have sway run the target on startup. If you 
 want to do it in any other way, go ahead!
+
+## Known Issues
+
+Since I have hacked this in a couple h from concept to “eh, works well enough”, 
+it is not very resilient. You mess up the timer/service, you have syntax errors 
+in your configuration file … it will just die instead of spawning a `swaybg` 
+process.
+
+On the plus side, you’ll notice when it doesn’t work. Since, you know, you don’t 
+get your wallpapers.
 
 ## How Do I Get Rid Of It?
 
