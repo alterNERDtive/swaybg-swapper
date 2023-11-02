@@ -1,0 +1,6 @@
+[Unit]
+Description=Executes swaybg-swapper.service
+[Timer]
+OnUnitInactiveSec=60m
+[Install]
+WantedBy=timers.target

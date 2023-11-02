@@ -1,0 +1,17 @@
+{
+  "DP-0": [
+    {
+      "file": "test.png",
+      "transform": "fill",
+      "colour": "#000000"
+    },
+    { "file": "empty.png" }
+  ],
+  "DP-1": [
+    { "file": "foo.png" },
+    {
+      "file": "bar.jpg",
+      "transform": "fit"
+    }
+  ]
+}
