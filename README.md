@@ -37,7 +37,7 @@ one looking for it, here it is. Have fun!
 
 You probably also want to start the service when sway starts. There are various 
 ways to do that. If you want to keep it simple, `exec` a simple `systemctl
---user start swaybg-swapper.service` in your sway config. If you want to do it 
+--user start swaybg-swapper.timer` in your sway config. If you want to do it 
 “right”, set up some `sway-session.target` and a drop-in config for the service 
 that binds it to that, then have sway run the target on startup.
 
